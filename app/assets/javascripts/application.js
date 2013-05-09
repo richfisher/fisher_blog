@@ -12,4 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require kindeditor
+//= require kindeditor/plugins/code/prettify
 //= require_tree .
+
+$(function(){
+	prettyPrint(); adjustHeightInParent()
+})
+

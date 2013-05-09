@@ -1,4 +1,11 @@
 FisherBlog::Application.routes.draw do
+  namespace :panel do
+    resources :categories, :except=>[:show]
+    resources :articles, :except=>[:show]
+  end
+
+  resources :articles
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
