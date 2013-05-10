@@ -16,6 +16,14 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :tags %>
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %>
+    <%= f.select :category_id, options_for_select(Category.all.map{|c| [c.name, c.id]},f.object.category_id) %>
+  </div>
+  <div class="field">
     <%= f.kindeditor :content, :width => 800, :height => 300 %>
   </div>
 

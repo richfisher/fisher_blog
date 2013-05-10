@@ -2,13 +2,13 @@ require 'test_helper'
 
 class Panel::ArticlesControllerTest < ActionController::TestCase
   setup do
-    @panel_article = panel_articles(:one)
+    @article = FactoryGirl.create(:article)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:panel_articles)
+    assert_not_nil assigns(:articles)
   end
 
   test "should get new" do
@@ -16,32 +16,27 @@ class Panel::ArticlesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create panel_article" do
-    assert_difference('Panel::Article.count') do
-      post :create, panel_article: {  }
+  test "should create article" do
+    assert_difference('Article.count') do
+      post :create, article: {  }
     end
 
-    assert_redirected_to panel_article_path(assigns(:panel_article))
-  end
-
-  test "should show panel_article" do
-    get :show, id: @panel_article
-    assert_response :success
+    assert_redirected_to panel_articles_path
   end
 
   test "should get edit" do
-    get :edit, id: @panel_article
+    get :edit, id: @article
     assert_response :success
   end
 
-  test "should update panel_article" do
-    put :update, id: @panel_article, panel_article: {  }
-    assert_redirected_to panel_article_path(assigns(:panel_article))
+  test "should update article" do
+    put :update, id: @article, article: {  }
+    assert_redirected_to panel_articles_path
   end
 
-  test "should destroy panel_article" do
-    assert_difference('Panel::Article.count', -1) do
-      delete :destroy, id: @panel_article
+  test "should destroy article" do
+    assert_difference('Article.count', -1) do
+      delete :destroy, id: @article
     end
 
     assert_redirected_to panel_articles_path

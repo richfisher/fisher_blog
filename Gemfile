@@ -17,6 +17,8 @@ end
 gem 'jquery-rails'
 
 group :development,:test do
+  gem 'rb-fsevent', '~> 0.9'
+  gem 'ruby-prof'
   gem 'guard'
   gem 'guard-test'
   gem 'factory_girl_rails'

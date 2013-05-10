@@ -17,6 +17,7 @@
 //= require_tree .
 
 $(function(){
-	prettyPrint(); adjustHeightInParent()
+	prettyPrint(); 
+	adjustHeightInParent();
 })
 
