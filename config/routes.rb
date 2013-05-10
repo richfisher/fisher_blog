@@ -5,6 +5,7 @@ FisherBlog::Application.routes.draw do
   end
 
   resources :articles
+  resources :categories, :only=>[:show]
 
   root :to => 'articles#index'
 

@@ -10,9 +10,11 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="navbar-inner">
 	  	<div class="container">
-		    <a class="brand" href="#">Richfisher.Me</a>
+		    <a class="brand" href="/">Richfisher.Me</a>
 		    <ul class="nav">
-		      <li class="active"><a href="#">Articles</a></li>
+		      <li>
+		      	<%= link_to 'Articles', articles_path %>
+		      </li>
 		      <li><a href="#">Works</a></li>
 		      <li><a href="#">Github</a></li>
 		    </ul>
@@ -30,7 +32,7 @@
 		  		<h5>Catogories</h5>
 		  		<ul>
 		  			<% for category in Category.all %>
-		  				<li><%= category.name %></li>
+		  				<li><%= link_to category.name, category_path(category) %></li>
 		  			<% end %>
 		  		</ul>
 		  	</div>
