@@ -7,8 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="navbar-inner">
+	  	<div class="container">
+		    <a class="brand" href="#">Richfisher.Me</a>
+		    <ul class="nav">
+		      <li class="active"><a href="#">Articles</a></li>
+		      <li><a href="#">Works</a></li>
+		      <li><a href="#">Github</a></li>
+		    </ul>
+	  	</div>
+	  </div>
+	</div>
 
-<%= yield %>
+  <div id="main_container" class="container">
+		<div class="row">
+		  <div class="span9">
+		  	<%= yield %>
+		  </div>
+		  <div class="span3">
+		  	<div class="block">
+		  		<h5>Catogories</h5>
+		  		<ul>
+		  			<% for category in Category.all %>
+		  				<li><%= category.name %></li>
+		  			<% end %>
+		  		</ul>
+		  	</div>
+		  	<div class="block">
+		  		<h5>Tags</h5>
+		  		<ul>
+		  		</ul>
+		  	</div>		  	
+		  </div>
+		</div>
+  </div>
 
 </body>
 </html>
