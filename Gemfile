@@ -5,6 +5,7 @@ gem 'mysql2'
 gem 'devise'
 
 gem 'kaminari'
+gem 'seo_helper', '~> 1.0'
 
 gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
 gem 'rails_kindeditor', '~> 0.3.18'

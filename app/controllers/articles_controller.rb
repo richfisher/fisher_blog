@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+
+		set_page_title @article.title
 	end
 end
 	
