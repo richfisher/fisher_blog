@@ -7,4 +7,8 @@ class Article < ActiveRecord::Base
   def tag_array
   	self.tags.split(',') rescue []
   end
+
+  def to_param
+    "#{id} #{title}".parameterize
+  end
 end
