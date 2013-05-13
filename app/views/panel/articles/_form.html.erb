@@ -13,18 +13,18 @@
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class=>'span8' %>
   </div>
   <div class="field">
     <%= f.label :tags %>
-    <%= f.text_field :tags %>
+    <%= f.text_field :tags, :class=>'span8' %>
   </div>
   <div class="field">
     <%= f.label :category_id %>
     <%= f.select :category_id, options_for_select(Category.all.map{|c| [c.name, c.id]},f.object.category_id) %>
   </div>
   <div class="field">
-    <%= f.kindeditor :content, :width => 800, :height => 300 %>
+    <%= f.kindeditor :content, :width => 900, :height => 600 %>
   </div>
 
   <div class="actions">
