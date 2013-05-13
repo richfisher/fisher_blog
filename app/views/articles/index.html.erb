@@ -1,5 +1,6 @@
 <% for article in @articles %>
-	<div>
+	<div class="clearfix">
 		<%= link_to article.title, article_path(article) %>
+		<span class="fr"><%= article.created_at.to_date %></span>
 	</div>
 <% end %>

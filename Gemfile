@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 gem 'devise'
 
+gem 'kaminari'
+
 gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
 gem 'rails_kindeditor', '~> 0.3.18'
 

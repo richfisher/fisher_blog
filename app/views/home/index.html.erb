@@ -1,5 +1,20 @@
-<% for article in @articles %>
-	<div>
-		<%= link_to article.title, article_path(article) %>
-	</div>
-<% end %>
+<div class="articles">
+	<% for article in @articles %>
+		<div class="article clearfix">
+			<h5><%= link_to article.title, article_path(article) %></h5>
+			<div class="bar clearfix">
+				<div class="tags">
+					<span>Tags</span> : <%= article.tags %>
+				</div>
+				<div class="right">
+					[<%= article.category.name %>] <%= article.created_at.strftime('%Y-%m-%d') %>
+				</div>
+			</div>
+			<hr />
+			<%= simple_format strip_tags article.content %>
+		</div>
+		<hr />
+	<% end %>
+</div>
+
+<%= paginate @articles %>
