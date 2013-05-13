@@ -9,5 +9,8 @@
 <div class="block">
 	<h5>Tags</h5>
 	<ul>
+		<% get_tags.each_with_index do |pair,index| %>
+			<%= render_tag_link pair,index %>
+		<% end %>
 	</ul>
 </div>		
