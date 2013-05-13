@@ -9,6 +9,6 @@ class Article < ActiveRecord::Base
   end
 
   def to_param
-    "#{id} #{title}".parameterize
+    "#{id} #{title.to_ascii}".parameterize
   end
 end
