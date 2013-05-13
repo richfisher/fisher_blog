@@ -4,6 +4,16 @@ body {
   font-family: "Monaco","Microsoft YaHei", "SimSun", "SimHei";
 }
 
+.navbar {
+	.login_block {
+		float: right;
+		line-height: 35px;
+		a {
+			color: #1b1b1b;
+		}	
+	}
+}
+
 #main_container {
 	background: white;
 	margin-top: 50px;
