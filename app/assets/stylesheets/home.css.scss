@@ -3,9 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .article {
+	h4{
+		a {
+			color: #4b5698;
+		}
+	}
 	.bar {
 		.tags {
 			float: left;
+			span {
+				color: green;
+			}
 		}
 		.right {
 			float: right;
