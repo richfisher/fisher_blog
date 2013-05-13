@@ -1,0 +1,13 @@
+<div class="row">
+	<% for work in @works %>
+		<div class="span4">
+			<h5>
+				<%= link_to work.link_url do %>
+					<%= work.title %>
+				<% end %>
+			</h5>
+			<%= image_tag work.picture.url %>
+			<%= work.description %>
+		</div>
+	<% end %>
+</div>

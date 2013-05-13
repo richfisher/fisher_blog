@@ -1,4 +1,4 @@
-<%= form_for([:panel,@work]) do |f| %>
+<%= form_for([:panel,@work],:html=>{:multipart => true}) do |f| %>
   <% if @work.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@work.errors.count, "error") %> prohibited this work from being saved:</h2>
@@ -22,6 +22,10 @@
   <div class="field">
     <%= f.label :link_url %>
     <%= f.text_field :link_url, :class=>'span8' %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
   </div>
   <div class="actions">
     <%= f.submit %>
