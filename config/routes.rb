@@ -9,10 +9,12 @@ FisherBlog::Application.routes.draw do
     get '/', :to=>'articles#index'
     resources :categories, :except=>[:show]
     resources :articles, :except=>[:show]
+    resources :works, :except=>[:show]
   end
 
   resources :articles
   resources :categories, :only=>[:show]
+  resources :works, :only=>[:index]
 
   root :to => 'home#index'
 

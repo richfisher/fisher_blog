@@ -1,0 +1,21 @@
+<h1>Listing works</h1>
+<%= link_to 'New Work', new_panel_work_path, :class=>'btn' %>
+
+<table class="table">
+  <tr>
+    <th>title</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @works.each do |work| %>
+  <tr>
+    <td><%= work.title %></td>
+    <td><%= link_to 'Edit', edit_panel_work_path(work) %></td>
+    <td><%= link_to 'Destroy', [:panel, work], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
