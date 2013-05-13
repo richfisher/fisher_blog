@@ -10,25 +10,10 @@
 	<%= render 'layouts/header' %>
 
   <div id="main_container" class="container">
-  	<%= render 'layouts/flash' %>
+		<%= render 'layouts/flash' %>
 		<div class="row">
 		  <div class="span9">
 		  	<%= yield %>
-		  </div>
-		  <div class="span3">
-		  	<div class="block">
-		  		<h5>Catogories</h5>
-		  		<ul>
-		  			<% for category in Category.all %>
-		  				<li><%= link_to category.name, category_path(category) %></li>
-		  			<% end %>
-		  		</ul>
-		  	</div>
-		  	<div class="block">
-		  		<h5>Tags</h5>
-		  		<ul>
-		  		</ul>
-		  	</div>		  	
 		  </div>
 		</div>
   </div>
