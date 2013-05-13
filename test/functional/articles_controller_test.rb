@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get index" do
+    get :index
+  end
+
+  test "should get show" do
+    article = FactoryGirl.create(:article)
+
+    get :show, :id=>article.id
+  end
 end
