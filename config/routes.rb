@@ -6,6 +6,7 @@ FisherBlog::Application.routes.draw do
   end
   
   namespace :panel do
+    get '/', :to=>'articles#index'
     resources :categories, :except=>[:show]
     resources :articles, :except=>[:show]
   end

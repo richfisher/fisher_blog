@@ -1,4 +1,4 @@
-class Panel::ArticlesController < ApplicationController
+class Panel::ArticlesController < Panel::ApplicationController
   def index
     @articles = Article.order('id DESC').all
   end
