@@ -18,6 +18,21 @@
 
 $(function(){
 	prettyPrint(); 
-	adjustHeightInParent();
-})
+});
 
+$(function(){
+  $('#back_to_top').click(function() {
+      var bd = document.body;
+      bd.scrollTop = 0;
+      return false;
+  });
+
+  $(window).scroll(function () {
+      var bd = document.body
+      if (document.body.scrollTop > 100) {
+          $('#back_to_top').fadeIn()
+      } else {
+          $('#back_to_top').fadeOut()
+      }
+  });
+});
