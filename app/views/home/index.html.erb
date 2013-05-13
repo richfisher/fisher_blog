@@ -1,0 +1,5 @@
+<% for article in @articles %>
+	<div>
+		<%= link_to article.title, article_path(article) %>
+	</div>
+<% end %>

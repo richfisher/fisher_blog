@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def layout_by_resource
-    if devise_controller?
-      "span12"
+    if controller_name == 'home'
+      "span9_span3"
     else
-      "application"
+      "span12"
     end
   end
 end

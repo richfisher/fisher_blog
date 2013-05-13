@@ -1,8 +1,7 @@
 <% if flash.present? && (flash[:notice].present? || flash[:alert].present?) %>
 	<div class="row">
 		<div class="span12">
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
+			<div class="alert alert-error"><%= notice || alert %></div>
 		</div>
 	</div>
 <% end %>
