@@ -1,4 +1,6 @@
 FisherBlog::Application.routes.draw do
+  devise_for :users
+
   namespace :panel do
     resources :categories, :except=>[:show]
     resources :articles, :except=>[:show]
