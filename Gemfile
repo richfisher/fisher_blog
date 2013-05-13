@@ -5,6 +5,8 @@ gem 'mysql2'
 gem 'devise'
 
 gem 'kaminari'
+gem 'carrierwave'
+
 gem 'seo_helper', '~> 1.0'
 gem 'unidecode'
 
