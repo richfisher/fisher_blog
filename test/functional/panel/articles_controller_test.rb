@@ -3,6 +3,7 @@ require 'test_helper'
 class Panel::ArticlesControllerTest < ActionController::TestCase
   setup do
     @article = FactoryGirl.create(:article)
+    sign_in :user, FactoryGirl.create(:user) 
   end
 
   test "should get index" do
