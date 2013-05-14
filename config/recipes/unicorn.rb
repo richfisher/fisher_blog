@@ -6,8 +6,9 @@ set_default(:unicorn_workers, 4)
 namespace :unicorn do
   desc "Setup Unicorn initializer and app configuration"
   task :setup, roles: :app do
-    run "mkdir -p #{shared_path}/config"
-    template "unicorn.rb.erb", unicorn_config
+    run "#{sudo} mkdir -p #{shared_path}/config"
+    template "unicorn.rb.erb", "/tmp/unicorn_conf" 
+    run "#{sudo} mv /tmp/unicorn_conf #{unicorn_config}"
   end
   after "deploy:setup", "unicorn:setup"
 end
