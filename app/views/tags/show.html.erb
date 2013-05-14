@@ -1,0 +1,9 @@
+<h3>Tags: <%= params[:id] %></h3>
+
+<% for article in @articles %>
+	<div class="clearfix">
+		<%= link_to article.title, article_path(article) %>
+		<span class="fr"><%= article.created_at.to_date %></span>
+		<p><span class="tags">Tag:</span><%= highlight article.tags, params[:id].to_s %></p>
+	</div>
+<% end %>

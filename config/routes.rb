@@ -15,6 +15,7 @@ FisherBlog::Application.routes.draw do
   resources :articles
   resources :categories, :only=>[:show]
   resources :works, :only=>[:index]
+  resources :tags, :only=>[:show]
 
   root :to => 'home#index'
 
