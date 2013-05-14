@@ -1,6 +1,7 @@
 <div>
-	<h2><%= @article.title %></h2>
-	<h3><%= @article.tags %></h3>
+	<h3><%= @article.title %></h3>
+	<h5><span class="tags">Tag: </span><%= @article.tags %></h5>
+	<hr />
 	<div>
 		<%= raw @article.content %>
 	</div>
