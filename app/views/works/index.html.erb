@@ -1,13 +1,21 @@
 <div class="row">
-	<% for work in @works %>
-		<div class="span4">
+	<% @works.each_with_index do |work, index| %>
+		<div class="span4 work">
 			<h5>
 				<%= link_to work.link_url do %>
 					<%= work.title %>
 				<% end %>
 			</h5>
-			<%= image_tag work.picture.url %>
-			<%= work.description %>
+			<div class="image">
+		    	<%= image_tag work.picture.url %>
+			</div>
+			<div class="description">
+				<%= work.description %>
+			</div>
 		</div>
+
+		<% if (index + 1) % 3 == 0 %>
+		    <div class="clearfix"></div>
+		<% end %>
 	<% end %>
 </div>
