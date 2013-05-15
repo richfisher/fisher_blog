@@ -5,7 +5,7 @@ module HomeHelper
 	end
 
 	def render_tag_link(pair,index)
-		return if index > 20
+		return if index > 16
 		font_size = 18-index 
 		font_size = 12 if font_size < 12
 		content_tag :span,:style=>"font-size:#{font_size}px" do 
