@@ -5,9 +5,9 @@ module HomeHelper
 	end
 
 	def render_tag_link(pair,index)
-		return if index > 15
-		font_size = 16-index 
-		font_size = 10 if font_size < 10
+		return if index > 20
+		font_size = 18-index 
+		font_size = 12 if font_size < 12
 		content_tag :span,:style=>"font-size:#{font_size}px" do 
 			link_to pair[0], tag_path(pair[0])
 		end
