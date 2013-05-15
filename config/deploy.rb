@@ -31,6 +31,11 @@ task :ln_database_yml do
 	run "ln -sf #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 end
 
+after 'deploy:create_symlink',   :link_uploads
+task :link_uploads, :roles => :web do
+  run "ln -sf #{deploy_to}/shared/uploads #{deploy_to}/current/public/"
+end
+
 after 'bundle:install', :ln_database_yml
 after 'deploy:update_code', 'deploy:migrate'
 after "deploy", "deploy:cleanup"
